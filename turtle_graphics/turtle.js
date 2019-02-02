@@ -3,42 +3,65 @@ class Turtle {
         this.x = x;
         this.y = y;
         this.currentDirection = "E";
+        this.points = [[x, y]];
         console.log(`starting at ${x},${y}`);
-        this.moveHistory= [];
-        //Push starting coordinate into moveHistory Array
-        this.moveHistory.push([this.x,this.y]);
+        this.moveHistory = [];
+        
+        this.moveHistory.push([this.x, this.y]);
     }
 
-    forward(steps) {
-        console.log(`moved forward ${steps} steps in ${this.currentDirection}`);
+    allPoints(){
+        return this.points;
+    }
 
-        
-        // console.log(`currently at ${this.x},${this.y}`);
+
+    forward(steps) {
+        console.log(`^^^^^^^^^^moved forward ${steps} steps in ${this.currentDirection}`);
+
+       console.log(`^^^^^^^^^^currently at ${this.x},${this.y}`);
+        let y1 = this.y;
+        let x1 = this.x;
 
         switch (this.currentDirection) {
             case "N":
-                // this.x = x;
-                //for each step push in a new coordinate
-                this.y -= steps;
+                            //
+                for (let i = 1; i <= steps; i++) {
+                    this.points.push([x1, y1 - i]);
+                    this.y -= 1;
+                }
+                console.log('+++++++++++++', this.points);
+                
+
                 break;
+
             case "S":
-                // this.x = x;
-                this.y += steps; 
+                for (let i = 1; i <= steps; i++) {
+                    this.points.push([x1, y1 + i]);
+                    this.y += 1;
+                }
+                console.log('+++++++++++++', this.points);
                 break;
+
             case "E":
-                this.x += steps;
-                // this.y = y;
+                for (let j = 1; j <= steps; j++) {
+                    this.points.push([x1 + j, y1]);
+                    this.x += 1;
+                }
+                console.log('+++++++++++++', this.points);
                 break;
+                
             case "W":
-                this.x -= steps;
-                // this.y = y;
+                for (let j = 1; j <= steps; j++) {
+                    this.points.push([x1 - j, y1]);
+                    this.x -= 1;
+                }
+                console.log('+++++++++++++', this.points);
                 break;
         }
-        // Push current path coordinates into moveHistory 
-        this.moveHistory.push([this.x,this.y]);
-
+         // Push current path coordinates into moveHistory 
+        console.log(`This is inside the case statement ###### ${this.moveHistory.push([this.x, this.y])}`);
+        
         console.log(`now at ${this.x},${this.y}`);
-       
         return this;
     }
 
@@ -81,13 +104,28 @@ class Turtle {
         console.log(`turned right, current direction now is ${this.currentDirection}`);
         return this;
     }
-    print(){
-        console.log(this.moveHistory);
-        
-
+    // TA Paul assisted with solving this piece
+    print() {
+        let points = this.points;
+        let obj = {};
+        points.forEach((point) => {
+            obj[`${point}`] = true;
+        });
+        for (let y =0; y < 10; y++){
+            let result = '';
+            for (let x=0; x < 10; x++){
+                let coordinate = [x, y];
+                if(obj[`${coordinate}`]){
+                    result = result + '■';
+                } else {
+                    result = result + '□';
+                }
+            };
+            console.log(result);
+        };
     }
 }
-console.log(new Turtle(0, 4)
+new Turtle(0, 4)
     .forward(3)
     .left()
     .forward(3)
@@ -101,6 +139,8 @@ console.log(new Turtle(0, 4)
     .forward(3)
     .left()
     .forward(3)
-    .print());
+    .print()
 
-//console.log(new Turtle(0,4).forward(3).left().forward(3));
+
+
+    
