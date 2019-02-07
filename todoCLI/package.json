@@ -1,0 +1,11 @@
+{
+  "name": "todocli",
+  "version": "0.0.1",
+  "description": "Command line to do list",
+  "main": "todoCLI.js",
+  "scripts": {
+    "test": "Bytestream"
+  },
+  "author": "Arivin Nair",
+  "license": "ISC"
+}
