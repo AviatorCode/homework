@@ -110,7 +110,9 @@ class Turtle {
         let obj = {};
         points.forEach((point) => {
             obj[`${point}`] = true;
+            console.log("@@@@@@@"+ point);
         });
+        console.log(obj);
         for (let y =0; y < 10; y++){
             let result = '';
             for (let x=0; x < 10; x++){

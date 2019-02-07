@@ -16,6 +16,25 @@
 //     }
 // }
 // console.log(result);
+// 
+
+/* let obj = {};
+points.forEach((point) => {
+obj[`${point}`] = true;
+});
+console.log(obj);
+for (let y =0; y < 10; y++){
+let result = '';
+for (let x=0; x < 10; x++){
+let coordinate = [x, y];
+if(obj[`${coordinate}`]){
+result = result + '■';
+} else {
+result = result + '□';
+}
+};
+console.log(result);
+}; */
 
 // let grid = [];
 
