@@ -6,7 +6,10 @@ app.use(logger('dev'));
 
 app.get('/', (req, res) =>{
     res.render('home')
-})
+});
+
+const cohortRouter = require('./routes/cohortRouter');
+app.use('/cohort', cohortRouter);
 
 
 const PORT = 5000;
