@@ -4,7 +4,7 @@ module.exports = {
   development: {
     client: 'pg', // This setting corresponds to the db connection js package
     connection: {
-      database: 'knexpress_labs',
+      database: 'teampicker',
       // The following two fields are nrequired for a Linux
       // setup. If you don't have a password for your user,
       // you must create one.
