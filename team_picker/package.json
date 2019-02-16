@@ -7,7 +7,7 @@
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-    "keywords": [
+  "keywords": [
     "express",
     "node",
     "npm",
@@ -21,7 +21,9 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "morgan": "^1.9.1"
+    "knex": "^0.16.3",
+    "morgan": "^1.9.1",
+    "pg": "^7.8.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
