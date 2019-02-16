@@ -1,0 +1,28 @@
+{
+  "name": "team_picker",
+  "version": "0.0.1",
+  "description": "team picker that stores list of cohorts and is able to generate teams for that cohort.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "npm",
+    "knex",
+    "bootstrap",
+    "ejs",
+    "morgon"
+  ],
+  "author": "Arivin Nair",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
