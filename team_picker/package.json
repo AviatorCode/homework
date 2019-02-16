@@ -4,9 +4,10 @@
   "description": "team picker that stores list of cohorts and is able to generate teams for that cohort.",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
+    "keywords": [
     "express",
     "node",
     "npm",
