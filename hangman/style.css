@@ -1,0 +1,38 @@
+/* body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+} */
+
+.container .keys1 .keys2 .key3{
+   color: green;
+   background-color: gray;
+   border-radius: 5px;
+    
+    text-align: center;
+}
+
+
+
+.key{
+    border: .4rem solid black;
+    border-radius: .5rem;
+    /* margin: .5rem; */
+    font-size: 1.5rem;
+    /* padding: 1rem .5rem; */
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+}
+
+.underscore{
+    border: 3px solid black;
+    font-size: 40px;
+    text-align: center;
+    margin: 30px auto;
+    height: 150px;
+    width: 80%
+}
